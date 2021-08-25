@@ -53,7 +53,7 @@ export function NavLinks(props) {
                 <Link style={{ textDecoration: 'none'}} href="#">Hello</Link>
             </LinkItem>
             <LinkItem>
-                <Link style={{ textDecoration: 'none'}} href="#">Zombie</Link>
+                <Link style={{ textDecoration: 'none'}}  href="#">Zombie</Link>
             </LinkItem>
         </LinksWrapper>
     </NavLinksContainer>

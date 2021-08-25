@@ -8,8 +8,8 @@ align-items: center;
 `;
 
 const LogoImg = styled.div`
-width: 29px;
-height: 29px;
+width: 40px;
+height: 40px;
 
 img{
     width: 100%;

@@ -14,7 +14,11 @@ height:60px;
 box-shadow:0 1px 3px rgba(15,15,15,0.13);
 display:flex;
 align-items: center;
+background-color: #fff;
 padding:0 ;
+position:fixed;
+top:0;
+z-index:2;
 `;
 
 const LeftSection = styled.div`
@@ -35,18 +39,18 @@ padding-right: 1.5em;
 `;
 
 
-export  function Navbar(props) {
+export function Navbar(props) {
     const isMobile = useMediaQuery({ maxWidth: DeviceSize.mobile });
     return <NavBarContainer>
         <LeftSection>
-            <Logo/>
-            </LeftSection>
+            <Logo />
+        </LeftSection>
         <MiddleSection>
-            {!isMobile &&<NavLinks/>}
+            {!isMobile && <NavLinks />}
         </MiddleSection>
         <RightSection>
-            {!isMobile && <Accessibility/>}
-            {isMobile && <MobileNavLinks/>}
+            {!isMobile && <Accessibility />}
+            {isMobile && <MobileNavLinks />}
         </RightSection>
     </NavBarContainer>
 }
