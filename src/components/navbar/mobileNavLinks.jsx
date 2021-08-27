@@ -1,6 +1,8 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import styled from 'styled-components';
 import { MenuToggle } from './menuToggle';
+import { motion } from "framer-motion"
+
 
 
 const NavLinksContainer = styled.div`
@@ -48,25 +50,29 @@ color: inherit;
 font-size: inherit;
 `;
 
+
+
+
 export function MobileNavLinks(props) {
     const [isOpen, setOpen] = useState(false);
-
+    
     return <NavLinksContainer>
-        <MenuToggle isOpen={isOpen} toggle={() => setOpen(!isOpen)} />
-        {isOpen && (<LinksWrapper>
-            <LinkItem>
-                <Link style={{ textDecoration: 'none' }} href="#">About us</Link>
-            </LinkItem>
-            <LinkItem>
-                <Link style={{ textDecoration: 'none' }} href="#">How it works</Link>
-            </LinkItem>
-            <LinkItem>
-                <Link style={{ textDecoration: 'none' }} href="#">Hello</Link>
-            </LinkItem>
-            <LinkItem>
-                <Link style={{ textDecoration: 'none' }} href="#">Zombie</Link>
-            </LinkItem>
-        </LinksWrapper>
-        )}
+            <MenuToggle isOpen={isOpen} toggle={() => setOpen(!isOpen)} />
+            {isOpen && (<LinksWrapper>
+                <LinkItem>
+                    <Link style={{ textDecoration: 'none' }} href="#">About us</Link>
+                </LinkItem>
+                <LinkItem>
+                    <Link style={{ textDecoration: 'none' }} href="#">How it works</Link>
+                </LinkItem>
+                <LinkItem>
+                    <Link style={{ textDecoration: 'none' }} href="#">Hello</Link>
+                </LinkItem>
+                <LinkItem>
+                    <Link style={{ textDecoration: 'none' }} href="#">Zombie</Link>
+                </LinkItem>
+            </LinksWrapper>
+            )}
+
     </NavLinksContainer>
 }
